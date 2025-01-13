@@ -94,6 +94,8 @@ a:focus {
 }
 
 .header .header-top {
+    padding: 10px;
+    margin-top: 15px;
     padding-bottom: 15px;
     border-bottom: 1px solid rgba(255, 255, 255, .1);
 }
@@ -104,7 +106,7 @@ a:focus {
 
 .header .brand a {
     color: #ffffff;
-    font-size: 60px;
+    font-size: 25px;
     font-weight: 100;
 }
 
@@ -117,13 +119,14 @@ a:focus {
 
 .header .topbar {
     position: relative;
-    text-align: right;
+    text-align: left;
 }
 
 .header .topbar .topbar-col {
     display: inline-block;
     padding: 0 15px;
     margin-bottom: 15px;
+    text-align: right;
 }
 
 .header .topbar-col a {
@@ -135,6 +138,7 @@ a:focus {
     margin-right: 10px;
     color: #FFD662;
 }
+
 
 .header .topbar-social {
     position: relative;
@@ -478,7 +482,7 @@ a:focus {
     padding: 45px 0 15px 0;
 }
 
-.service .service-item {
+/* .service .service-item {
     position: relative;
     width: 100%;
     text-align: center;
@@ -486,14 +490,14 @@ a:focus {
     border-radius: 5px;
     margin-bottom: 30px;
     box-shadow: 0 0 30px rgba(0, 0, 0, .1);
-}
+} */
 
 .service .service-item img {
     width: 100%;
     border-radius: 5px 5px 0 0;
 }
 
-.service .service-item h3 {
+/* .service .service-item h3 {
     margin: 0;
     padding: 25px 15px 15px 15px;
     font-size: 20px;
@@ -501,14 +505,30 @@ a:focus {
     color: #00539C;
 }
 
+*/
 .service .service-item p {
     margin: 0;
-    padding: 0 25px 25px 25px;
-    font-size: 16px;
+    padding-bottom:15px;
+    font-size: 15px;
 }
+
 
 .service .service-item a.btn {
     position: relative;
+    margin-bottom: 30px;
+    padding: 5px 15px;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    background: #FFD662;
+    transition: .3s;
+} 
+
+.service .service-item a.btn-lg {
+    position: relative;
+    margin-top: 20px;
     margin-bottom: 30px;
     padding: 10px 20px;
     font-size: 14px;
@@ -518,7 +538,8 @@ a:focus {
     border-radius: 5px;
     background: #FFD662;
     transition: .3s;
-}
+} 
+
 
 .service .service-item:hover a.btn {
     color: #ffffff;
