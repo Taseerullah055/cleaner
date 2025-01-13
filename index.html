@@ -16,12 +16,21 @@
         <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
         <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
         <link rel="stylesheet" href="/path/to/countrySelect.css">
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        <style>
+             
+            .select2-results__option .icon {
+                margin-right: 8px;
+            }
+        </style>
+       
     </head>
 
     <body>
@@ -61,14 +70,15 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="col-lg-6">                  
-                           
-                            <select style="width: 500px;margin-left: 25px; padding: 10px 0;"  class="form-select" aria-label="Default select example">
-                                <option selected>select menu</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>
-                                <option value="3">Three</option>
-                            </select>
+                        <div class="col-lg-6">             
+            
+                            <div class="location">
+                                <select class="icon-select" style="width: 200px;">
+                                    <option value="home" data-icon="fas fa-light fa-location-dot">Business Bay,Dubai, UAE</option>
+                                    <option value="user" data-icon="fas fa-location-dot">Business Bay,Dubai, UAE</option>
+                                    <option value="settings" data-icon="fas fa-location-dot">Business Bay,Dubai, UAE</option>
+                                </select>
+                            </div>
                             
                             <div class="navbar navbar-expand-lg bg-light navbar-light">
                                 <a href="#" class="navbar-brand">MENU</a>
@@ -695,8 +705,26 @@
         <script src="lib/owlcarousel/owl.carousel.min.js"></script>
         <script src="lib/isotope/isotope.pkgd.min.js"></script>
         <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+
+        <script>
+            $(document).ready(function () {
+                $(".icon-select").select2({
+                    templateResult: function (state) {
+                        if (!state.id) return state.text;
+                        const iconClass = $(state.element).data('icon');
+                        return $(`<span><i class="${iconClass} icon"></i> ${state.text}</span>`);
+                    },
+                    templateSelection: function (state) {
+                        if (!state.id) return state.text;
+                        const iconClass = $(state.element).data('icon');
+                        return $(`<span><i class="${iconClass} icon"></i> ${state.text}</span>`);
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
