@@ -89,7 +89,7 @@ a:focus {
     position: relative;
     width: 100%;
     padding: 15px 0 0 0;
-    background: #00539C;
+    background: #ffff;
 }
 .header .head-container{
 
@@ -100,7 +100,7 @@ a:focus {
 }
 .header.home {
     margin-bottom: 45px;
-    background: linear-gradient(rgba(0, 83, 156, 1), rgba(0, 83, 156, .9), rgba(0, 83, 156, 1)), url(../img/header.jpg);
+    background: linear-gradient(rgba(106, 204, 102, .9), rgba(153, 204, 102, .3), rgba(0, 83, 156, .7)), url(../img/header.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -158,15 +158,22 @@ a:focus {
 
 .header .brand a {
     /* color: #ffffff; */
-    font-size: 50px;
+    font-size: 16px;
     font-weight: bold;
 }
 
+.header .brand a p{
+
+    margin-top: -20px;
+    margin-left: 20px;
+   
+}
 .header .brand img {
     width: 100%;
     max-width: 150px;
     height: 100%;
-    max-height: 100px;
+    max-height: 120px;
+    margin-top: -20px;
 }
 
 .header .topbar {
@@ -542,22 +549,25 @@ a:focus {
     padding: 45px 0 15px 0;
 }
 
-/* .service .service-item {
-    position: relative;
+.service .service-item {
+    /* position: relative;
     width: 100%;
     text-align: center;
     background: #ffffff;
     border-radius: 5px;
     margin-bottom: 30px;
-    box-shadow: 0 0 30px rgba(0, 0, 0, .1);
-} */
+    box-shadow: 0 0 30px rgba(0, 0, 0, .1); */
+    padding: 25px;
+}
 
 .service .service-item img {
     width: 100%;
-    border-radius: 5px 5px 0 0;
+    /* border-radius: 5px 5px 0 0; */
+    border: 2px solid #99CCCC;
+    border-radius: 10px;
 }
 
-/* .service .service-item h3 {
+.service .service-item h3 {
     margin: 0;
     padding: 25px 15px 15px 15px;
     font-size: 20px;
@@ -565,7 +575,7 @@ a:focus {
     color: #00539C;
 }
 
-*/
+
 .service .service-item p {
     margin: 0;
     padding-bottom:15px;
