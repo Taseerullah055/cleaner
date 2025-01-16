@@ -373,7 +373,7 @@ a:focus {
 .header .hero .form {
     padding: 30px;
     border: 1px solid rgba(255, 255, 255, .4);
-    background: rgba(255, 255, 255, .3);
+    background: rgba(0, 153, 153, .5);
     border-radius: 5px;
 }
 
@@ -389,7 +389,7 @@ a:focus {
     height: 45px;
     border-radius: 5px;
     border: 1px solid rgba(255, 255, 255, .3);
-    background: rgba(255, 255, 255, .2);
+    background: rgba(51, 102, 51, .1);
 }
 
 .header .hero .form textarea {
@@ -420,7 +420,7 @@ a:focus {
 
 .header .hero .form .btn:hover {
     color: #00539C;
-    background: #ffffff;
+    background: #FFD662;;
 }
 
 @media (max-width: 767.98px) {
@@ -603,13 +603,12 @@ a:focus {
     padding: 10px 20px;
     font-size: 14px;
     text-transform: uppercase;
-    color: #000000;
+    color: #FFD662;
     border: none;
     border-radius: 5px;
-    background: #FFD662;
+    background: #4f462e;
     transition: .3s;
 } 
-
 
 .service .service-item:hover a.btn {
     color: #ffffff;
@@ -680,6 +679,26 @@ a:focus {
     align-items: center;
     justify-content: center;
     font-size: 0;
+}
+
+.team .stars{
+
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.team .stars img{
+
+    width: 20px;
+    margin-right: 5px;
+}
+
+.team  span{
+
+    display: block; 
+    font-size: 15px; 
+    margin-top: 15px;
 }
 
 .team .team-social a {
