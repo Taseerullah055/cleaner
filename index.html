@@ -29,6 +29,23 @@
             .select2-results__option .icon {
                 margin-right: 8px;
             }
+
+            #map {
+                height: 300px;
+                width: 100%;
+            }
+            .location {
+                margin-bottom: 20px;
+            }
+
+            .hide{
+
+                display: none;
+            }
+            .show{
+
+                display: block;
+            }
         </style>
        
     </head>
@@ -37,6 +54,79 @@
         <div class="wrapper">
             <!-- Header Start -->
             <div class="header home">
+                <div id="popup1" class="popup-window">
+                    <!-- <a id="close" class="close1" href="#">&times;</a> -->
+                    <div class="popup">
+                        <div class="action-btn">
+                            <div class="login-logout">
+                                <a class="btn active" id="login" data-toggle="collapse" href="#login-box" role="button" aria-expanded="false" aria-controls="login-box">
+                                    Log-in
+                                  </a>
+                                  <button class="btn" id="signup" type="button" data-toggle="collapse" data-target="#signup-box" aria-expanded="false" aria-controls="signup-box">
+                                    Sign-Up
+                                  </button>
+                            </div>
+                            <a id="close" class="close1" href="#">&times;</a>
+                        </div>
+                        <div class="login-container" id="login-box">                                                    
+                            <div class="login-text">                               
+                                  
+                                <form>
+                                    <div class="form-group">
+                                        <label for="email">Email Address</label>
+                                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" value="Example@gmail.com">
+                                        
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input type="password" class="form-control" value="123232323" id="password" aria-describedby="emailHelp" value="Example@gmail.com" >
+                                        
+                                    </div>                         
+
+                                </form>
+                            </div>                           
+                        </div>  
+
+                        <div class="login-container" id="signup-container">                                                    
+                            <div class="login-text">                               
+                                  
+                                <form>
+                                    <div class="form-group">
+                                        <label for="phone">Your Phone Number</label>
+                                        <input type="text" class="form-control" id="phone" value="+92 34567890234">
+                                        
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="fname">First Name</label>
+                                        <input type="text" class="form-control" id="fname" value="John">
+
+                                        <label for="lname">Last Name</label>
+                                        <input type="text" class="form-control" id="lname" value="Doe">
+                                        
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="email">Email Address</label>
+                                        <input type="email" class="form-control" id="email" value="Exmaple@gmail.com">
+                                        
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input type="password" class="form-control" value="123232323" id="password" aria-describedby="emailHelp" value="Example@gmail.com" >
+                                        
+                                    </div>                         
+
+                                </form>
+                            </div>                           
+                        </div>  
+                        
+                        <button id="containue-btn">Containue</button>
+                        
+                    </div>
+                </div>
                 <div class="container-fluid head-container">
                     <div class="col-lg-12">
                         <div class="topbar">
@@ -74,10 +164,16 @@
                         <div class="col-lg-5">             
             
                             <div class="location">
-                                <p><span><i class="fa-solid fa-location-dot" style="margin-right: 10px;"></i>Business Bay, Dubai, UAE</span> <button>Change</button></p>
-                                
+                                <p>
+                                    <span>
+                                        <i class="fa-solid fa-location-dot" style="margin-right: 10px;"></i>
+                                        <span id="location-text">Fetching location...</span>
+                                    </span>
+                                    <button onclick="changeLocation()">Change</button>
+                                </p>
+                                <div id="map"></div>
                             </div>
-                            
+
                             <div class="navbar navbar-expand-lg bg-light navbar-light">
                                 <a href="#" class="navbar-brand">MENU</a>
                                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -88,16 +184,16 @@
                                     <div class="navbar-nav ml-5">
 
                                         <a href="index.html" class="nav-item nav-link active">Home</a>
-                                        <a href="service.html" class="nav-item nav-link">Service</a>
+                                        <a href="services.html" class="nav-item nav-link">Services</a>
                                         <a href="about.html" class="nav-item nav-link">About</a>                                        
-                                        <a href="portfolio.html" class="nav-item nav-link">Career</a>                                        
+                                        <a href="career.html" class="nav-item nav-link">Career</a>                                        
                                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4" style=" margin-top: -70px;margin-left: -20px;text-align: right;">                         
+                        <div class="col-lg-4" style=" margin-top: -90px;margin-left: -20px;text-align: right;">                         
                             
                             <select class="selectpicker countrypicker" data-live-search="true">
                                 <option data-content='<span class="flag-icon flag-icon-af"></span> Afghanistan' value="AF">Afghanistan</option>
@@ -147,7 +243,18 @@
                                 <option data-content='<span class="flag-icon flag-icon-cz"></span> Czechia' value="CZ">Czechia</option>
                            </select>
                     
-                         <a href="" style=" margin-left: 15px;color: #000;"><i class="fa fa-user"></i> SignUp</a>                               
+                         <!-- <a href="" style=" margin-left: 15px;color: #000;"><i class="fa fa-user"></i> SignUp</a>  -->
+                         <div class="dropdown">
+                            <a class="dropbtn" id="show-popup" href="#popup1"><i class="fa fa-user"></i> SignUp</a>
+                            <div class="dropdown-content">
+                              <a href="profile.html"><i class="fa fa-thin fa-user"></i>Profile</a>
+                              <a href="booking.html"><i class="fa fa-file"></i>Booking</a>
+                              <a href="address.html"><i class="fa fa-location-dot"></i>Address</a>
+                              <a href="payments.html"><i class="fa fa-light fa-credit-card"></i>Payment Method</a>
+                              <button>Sign Out</button>
+                            </div>
+                
+                          </div>
                            
                         </div>
                     </div>
@@ -204,7 +311,7 @@
                                         <p>
                                             Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
                                         </p>
-                                        <a class="btn" href="">Book Now</a>
+                                        <a class="btn" href="service.html">Book Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -220,7 +327,7 @@
                                         <p>
                                             Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
                                         </p>
-                                        <a class="btn" href="">Book Now</a>
+                                        <a class="btn" href="service.html">Book Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -236,7 +343,7 @@
                                         <p>
                                             Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
                                         </p>
-                                        <a class="btn" href="">Book Now</a>
+                                        <a class="btn" href="service.html">Book Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -252,7 +359,7 @@
                                         <p>
                                             Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
                                         </p>
-                                        <a class="btn" href="">Book Now</a>
+                                        <a class="btn" href="service.html">Book Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -268,7 +375,7 @@
                                         <p>
                                             Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
                                         </p>
-                                        <a class="btn" href="">Book Now</a>
+                                        <a class="btn" href="service.html">Book Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -284,7 +391,7 @@
                                         <p>
                                             Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare
                                         </p>
-                                        <a class="btn" href="">Book Now</a>
+                                        <a class="btn" href="service.html">Book Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -292,7 +399,7 @@
                         <div class="col-lg-12 col-md-12">
                             <div class="service-item" style="text-align: center;">                                
                                     
-                             <a class="btn btn-lg" href="">Show More</a>                                    
+                             <a class="btn btn-lg" href="services.html">Show More</a>                                    
                                 
                             </div>
                         </div>
@@ -697,6 +804,7 @@
         <script src="lib/lightbox/js/lightbox.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/i18n/defaults-*.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXE5-ei0e7mHsKBgDPI0hhCub85S9oZs0""></script>
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
@@ -707,5 +815,85 @@
                 $('.my-select').selectpicker();
             });
         </script>
+
+<script>
+    function initMap(lat, lng) {
+        const mapDiv = document.getElementById("map");
+        const locationText = document.getElementById("location-text");
+
+        const position = { lat: lat, lng: lng };
+
+        // Update location text
+        locationText.innerText = `Latitude: ${lat.toFixed(4)}, Longitude: ${lng.toFixed(4)}`;
+
+        // Initialize map
+        const map = new google.maps.Map(mapDiv, {
+            center: position,
+            zoom: 15,
+        });
+
+        // Add a marker
+        new google.maps.Marker({
+            position: position,
+            map: map,
+        });
+    }
+
+    function fetchLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const { latitude, longitude } = position.coords;
+                    initMap(latitude, longitude);
+                },
+                (error) => {
+                    alert("Error fetching location: " + error.message);
+                }
+            );
+        } else {
+            alert("Geolocation is not supported by this browser.");
+        }
+    }
+
+    $('#map').toggleClass('hide');
+    function changeLocation() {
+
+        $('#map').toggleClass('show');
+        fetchLocation();
+    }
+
+    // Fetch location on page load
+    fetchLocation();
+</script>
+
+<script>
+    $('#show-popup').on('click',function(e){
+
+        $('#popup1').css('visibility','visible');
+    })
+
+    $('#close').on('click',function(){
+
+        $('#popup1').css('display','none');
+    });
+
+    $('#signup').on('click',function(){
+
+        $('#login').removeClass('active');
+        $('#login-box').css('display','none');
+        $('#signup-container').css('display','flex');
+        $(this).addClass('active');
+       console.log('testing');
+    });
+
+    $('#login').on('click',function(){
+
+        $(this).addClass('active');
+        $('#signup').removeClass('active');
+        $('#login-box').css('display','flex');
+        $('#signup-container').css('display','none');
+        
+    });
+</script>
     </body>
 </html>
