@@ -32,7 +32,7 @@
 
             #map {
                 height: 300px;
-                width: 100%;
+                width: 100%;    
             }
             .location {
                 margin-bottom: 20px;
@@ -171,7 +171,11 @@
                                     </span>
                                     <button onclick="changeLocation()">Change</button>
                                 </p>
+                                
+                                
                                 <div id="map"></div>
+                                
+                               
                             </div>
 
                             <div class="navbar navbar-expand-lg bg-light navbar-light">
@@ -180,7 +184,7 @@
                                     <span class="navbar-toggler-icon"></span>
                                 </button>
 
-                                <div class="collapse navbar-collapse pt-3 ml-4" id="navbarCollapse">
+                                <div class="collapse navbar-collapse pt-0 ml-4" id="navbarCollapse">
                                     <div class="navbar-nav ml-5">
 
                                         <a href="index.html" class="nav-item nav-link active">Home</a>
@@ -193,9 +197,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4" style=" margin-top: -90px;margin-left: -20px;text-align: right;">                         
+                        <div class="col-lg-4" style=" margin-top: -53px;text-align: right;">                         
                             
-                            <select class="selectpicker countrypicker" data-live-search="true">
+                           <div class="side-bar">
+                              <select class="selectpicker countrypicker" data-live-search="true">
                                 <option data-content='<span class="flag-icon flag-icon-af"></span> Afghanistan' value="AF">Afghanistan</option>
                                 <option data-content='<span class="flag-icon flag-icon-al"></span> Albania' value="AL">Albania</option>
                                 <option data-content='<span class="flag-icon flag-icon-dz"></span> Algeria' value="DZ">Algeria</option>
@@ -241,20 +246,21 @@
                                 <option data-content='<span class="flag-icon flag-icon-cu"></span> Cuba' value="CU">Cuba</option>
                                 <option data-content='<span class="flag-icon flag-icon-cy"></span> Cyprus' value="CY">Cyprus</option>
                                 <option data-content='<span class="flag-icon flag-icon-cz"></span> Czechia' value="CZ">Czechia</option>
-                           </select>
+                             </select>
                     
-                         <!-- <a href="" style=" margin-left: 15px;color: #000;"><i class="fa fa-user"></i> SignUp</a>  -->
-                         <div class="dropdown">
-                            <a class="dropbtn" id="show-popup" href="#popup1"><i class="fa fa-user"></i> SignUp</a>
-                            <div class="dropdown-content">
-                              <a href="profile.html"><i class="fa fa-thin fa-user"></i>Profile</a>
-                              <a href="booking.html"><i class="fa fa-file"></i>Booking</a>
-                              <a href="address.html"><i class="fa fa-location-dot"></i>Address</a>
-                              <a href="payments.html"><i class="fa fa-light fa-credit-card"></i>Payment Method</a>
-                              <button>Sign Out</button>
-                            </div>
-                
-                          </div>
+                                <!-- <a href="" style=" margin-left: 15px;color: #000;"><i class="fa fa-user"></i> SignUp</a>  -->
+                                <div class="dropdown">
+                                        <a class="dropbtn" id="show-popup" href="#popup1"><i class="fa fa-user"></i> SignUp</a>
+                                        <div class="dropdown-content">
+                                        <a href="profile.html"><i class="fa fa-thin fa-user"></i>Profile</a>
+                                        <a href="booking.html"><i class="fa fa-file"></i>Booking</a>
+                                        <a href="address.html"><i class="fa fa-location-dot"></i>Address</a>
+                                        <a href="payments.html"><i class="fa fa-light fa-credit-card"></i>Payment Method</a>
+                                        <button>Sign Out</button>
+                                        </div>
+                        
+                                    </div>
+                           </div>
                            
                         </div>
                     </div>
@@ -822,6 +828,7 @@
         const locationText = document.getElementById("location-text");
 
         const position = { lat: lat, lng: lng };
+        colorScheme: google.maps.ColorScheme.LIGHT;
 
         // Update location text
         locationText.innerText = `Latitude: ${lat.toFixed(4)}, Longitude: ${lng.toFixed(4)}`;

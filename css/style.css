@@ -88,8 +88,9 @@ a:focus {
 .sub-header-container {
     position: relative;
     width: 100%;
-    padding: 15px 0 0 0;
+    /* padding: px 0 0 0; */
     background: #ffff;
+
 }
 .header .head-container{
 
@@ -105,6 +106,13 @@ a:focus {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.navbar{
+
+    padding: 0;
+    margin: 0;
+    margin-top: -10px;
+}
 .location{
 
     width: 500px; 
@@ -114,7 +122,7 @@ a:focus {
     padding: 5px 15px;
     line-height: 12px;
     /* font-size: 21px; */
-    
+    position: relative;   
 
     
 }
@@ -138,42 +146,52 @@ a:focus {
     font-weight: bold;
 }
 
+#map{
+
+    position: absolute;
+    top: 50px;
+    left: .5%;
+    background: none;
+    z-index: 20;
+    border-radius: 10px;
+}
+
 @media (min-width: 992px) {
     .header .row {
         padding: 0 60px;
     }
 }
 
-.header .header-top {
-    padding: 10px;
+/* .header .header-top {
+    /* padding: 5px; */
     /* margin-top: 5px; */
-    padding-bottom: 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, .1);
-}
+    /* padding-bottom: 15px; */
+    /* border-bottom: 1px solid rgba(255, 255, 255, .1); */
+} */
 
 .header .brand {
     position: relative;
-
 }
 
 .header .brand a {
     /* color: #ffffff; */
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
 }
 
 .header .brand a p{
 
     margin-top: -20px;
-    margin-left: 20px;
+    margin-left: -50px;
    
 }
 .header .brand img {
     width: 100%;
-    max-width: 150px;
-    height: 100%;
+    max-width: 100px;
+    height: 80%;
     max-height: 120px;
-    margin-top: -20px;
+    margin-left: -60px;
+    /* margin-top: -20px; */
 }
 
 .header .topbar {
@@ -1709,6 +1727,18 @@ a:focus {
 }
 
 
+.side-bar
+{
+
+    margin-top: -10px;
+    margin-left: 250px;
+    width: 100%;
+}
+.dropdown{
+
+    width: 40% !important;
+    /* margin-left: 50px; */
+}
 /* Style The Dropdown Button */
 .dropbtn {
     /* background-color: #4CAF50; */
@@ -2382,6 +2412,9 @@ a:focus {
 
     margin-right: 20px;
 }
+
+
+
 
 
 
