@@ -2163,6 +2163,19 @@ a:focus {
     border-bottom: 1px solid black;
 }
 
+
+.login-container .login-text .card-box input{
+
+   box-shadow: 2px 2px 5px rgba(0,0,0,0.5),-2px -2px 5px rgba(0,0,0,0.5);
+   border-radius: 10px;
+}
+
+.login-container .login-text .card-box div input{
+
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5),-2px -2px 5px rgba(0,0,0,0.5);
+    border-radius: 10px;
+ }
+
 .active{
 
     color: green;
@@ -2501,6 +2514,11 @@ a:focus {
 .profile-address div p img{
 
     margin-right: 20px;
+}
+
+.div-container{
+
+    display: none;
 }
 
 

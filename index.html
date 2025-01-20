@@ -54,8 +54,7 @@
         <div class="wrapper">
             <!-- Header Start -->
             <div class="header home">
-                <div id="popup1" class="popup-window">
-                    <!-- <a id="close" class="close1" href="#">&times;</a> -->
+                <div id="popup1" class="popup-window">                    
                     <div class="popup">
                         <div class="action-btn">
                             <div class="login-logout">
@@ -88,7 +87,7 @@
                             </div>                           
                         </div> 
                         
-                        <div class="div-container login-container" id="signup-container1">                                                    
+                        <div class="login-container" id="signup-container1">                                                    
                             <div class="login-text">                              
                                   
                                 <form>
@@ -939,6 +938,10 @@
         $('#popup1').css('display','none');
     });
 
+    $('#login').on('click',function(){
+
+        $('.div-container').css('display','none');
+    })
     $('#signup').on('click',function(){
 
         $('#login').removeClass('active');
@@ -948,16 +951,17 @@
        console.log('testing');
     });
 
+    let currentDivIndex = 0; // Tracks the current div index
+    const divs = document.querySelectorAll('.div-container');
+    
     $('#containue-btn').on('click',function(){
-
-        $('#login').removeClass('active');
-        $('#login-box').css('display','none');
+      
         $('#signup-container1').css('display','none');
-        $('#signup-container2').css('display','flex');
-          
-
-        $(this).addClass('active');
-        // console.log('testing');
+        divs.forEach(div => div.style.display = 'none');
+        divs[currentDivIndex].style.display = 'flex';
+        $('#login').removeClass('active');
+        $('#login-box').css('display','none');        
+        currentDivIndex = (currentDivIndex + 1) % divs.length;
     });  
 
     $('#login').on('click',function(){

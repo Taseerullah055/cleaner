@@ -175,12 +175,58 @@
             <div class="story" style="margin-top: 100px;">
                 <div class="container">
                     <div class="row">
+                        <div id="popup2" class="popup-window">                    
+                            <div class="popup">
+                                <div class="action-btn">
+                                    <div class="login-logout">
+                                        <h6 style="color: #000; font-weight: bold; padding: 10px 0;">Add New Card</h6>
+                                    </div>
+                                    <a id="close" class="close1" href="#">&times;</a>
+                                </div>
+                                <div class="login-container" id="login-box">                                                    
+                                    <div class="login-text">                               
+                                          
+                                        <form>
+                                            <div class="form-group card-box">
+                                                <label for="card">Card Number</label>
+                                                <input type="text" class="form-control" id="card">
+                                                
+                                            </div>
+            
+                                            <div class="form-group card-box">
+                                                <div class="inner-group">
+                                                    <div>
+                                                        <label for="expiry_date">Expiry Date</label>
+                                                        <input type="date" class="form-control" id="expiry_date">
+                                                    </div>
+        
+                                                    <div>
+                                                        <label for="cvc">CVC</label>
+                                                        <input type="text" class="form-control" id="cvc">
+                                                    </div>
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                            <!-- <div class="form-group"> -->
+                                                
+                                                <input type="Submit" style="border-radius: 10px; color: yellow; background: green;" class="form-control" value="Add New Card">
+                                                
+                                            <!-- </div> -->
+                                            
+            
+                                        </form>
+                                    </div>                           
+                                </div>          
+                                
+                            </div>
+                        </div>
                         <div class="profile-container">                        
                             <div class="profile-text">                               
                                   
                                 <div class="new-address">
                                     <p>Your saved credit cards</p>
-                                    <a href="">Add New</a>
+                                    <a id="add-new" href="#popup2" >Add New</a>
                                 </div>
 
                                 <div class="profile-address" style="margin-top: 50px;">
@@ -300,6 +346,17 @@
 
                $('.my-select').selectpicker();
            });
+
+           $('#add-new').on('click',function(e){
+
+              $('#popup2').css('display','block');
+              $('#popup2').css('visibility','visible');
+           })
+
+            $('#close').on('click',function(){
+
+             $('#popup2').css('display','none');
+            });
        </script>
     </body>
 </html>
