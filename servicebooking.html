@@ -209,12 +209,48 @@
                                                 <span id="location-text">Fetching location...</span>
                                             </span>
                                             <button onclick="changeLocation()">Change</button>
-                                        </p>
+                                        </p>                                       
                                         
-                                        
-                                        <div id="map"></div>
-                                        
+                                        <div id="map"></div>                                       
                                        
+                                    </div>
+
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="exampleCheck1">How many hours do you need your professional to stay?</label>
+                                        <div id="inputs" class="inputs">
+                                            <input class="input selected" type="text" inputmode="numeric" maxlength="1" value="1" />
+                                            <input class="input" type="text" inputmode="numeric" maxlength="1" value="2" />
+                                            <input class="input" type="text" inputmode="numeric" maxlength="1" value="3" />
+                                            <input class="input" type="text" inputmode="numeric" maxlength="1" value="4"/>
+                                            <input class="input" type="text" inputmode="numeric" maxlength="1" value="5" />
+                                            <input class="input" type="text" inputmode="numeric" maxlength="1" value="6" />
+                                            <input class="input" type="text" inputmode="numeric" maxlength="1" value="7" />
+                                            <input class="input" type="text" inputmode="numeric" maxlength="1" value="8"/>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="exampleCheck1">How many rofessional do you need?</label>
+                                        <div id="inputs" class="inputs">
+                                            <input class="input selected" type="text" inputmode="numeric" maxlength="1" value="1" />
+                                            <input class="input" type="text" inputmode="numeric" maxlength="1" value="2" />
+                                            <input class="input" type="text" inputmode="numeric" maxlength="1" value="3" />
+                                            <input class="input" type="text" inputmode="numeric" maxlength="1" value="4"/>                                           
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="exampleCheck1">How many rofessional do you need?</label>
+                                        <div id="inputs" class="inputs">
+                                            <input class="input-text selected" type="text" value="No I have them" />
+                                            <input class="input-text" type="text" value="Yes,Please" />
+                                            <input class="input-text" type="text" value="Vacuum Only" />
+                                                                                       
+
+                                        </div>
                                     </div>
                                 </div> 
                                 
@@ -243,9 +279,24 @@
                                         <span>Balcony Cleaning Irong and Folding</span>
                                     </div>
                                     <div>
-                                        <p>D</p>
-                                        <span>Balcony Cleaning Irong and Folding</span>
-                                    </div>                                    
+                                        <p>Duration</p>
+                                        <span>2 hours</span>
+                                    </div> 
+                                    
+                                    <div>
+                                        <p>Date & Start Time</p>
+                                        <span>12 Apr 2024 <br> 17:00-17:30</span>
+                                    </div>
+                                    
+                                    <div>
+                                        <p>No of Professional</p>
+                                        <span>4</span>
+                                    </div>
+
+                                    <div>
+                                        <p>Material</p>
+                                        <span>Yes</span>
+                                    </div>
                                     
                                 </div>    
                                   
@@ -261,15 +312,15 @@
                                     <h4 style="color: #000; font-weight: bold; margin-bottom: 20px;">Payment Summary</h4>
                                     <div>
                                         <p>subtotal</p>
-                                        <p>AED 88.00</p>
+                                        <p style="font-weight: bold;">AED 88.00</p>
                                     </div>
                                     <div>
                                         <p>GST</p>
-                                        <p>AED 10.00</p>
+                                        <p style="font-weight: bold;">AED 10.00</p>
                                     </div>
                                     <div>
                                         <p>Total</p>
-                                        <p>AED 98.00</p>
+                                        <p style="font-weight: bold;">AED 98.00</p>
                                     </div>
                                     
                                 </div>    
@@ -278,7 +329,77 @@
                            
                         </div>
                     </div>
-                </div>          
+                </div> 
+                
+            <!-- ************* -->
+
+            <h3 style="color: grey; margin-top: 20px; margin-left: 120px; margin-bottom: 30px; font-weight: bold;">Order Placed</h3>
+            <div class="story">
+                <div class="container">
+                    <div class="row">                  
+            
+                        <div class="col-lg-6">
+                            <div class="booking-info">                                 
+                                <div class="location">
+                                    <p>
+                                        <span>
+                                            <i class="fa-solid fa-location-dot" style="margin-right: 10px;"></i>
+                                            <span id="location-text">Fetching location...</span>
+                                        </span>
+                                        <button onclick="changeLocation()">Change</button>
+                                    </p>                                       
+                                    
+                                    <div id="map"></div>                                       
+                                   
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label" for="exampleCheck1">How many hours do you need your professional to stay?</label>
+                                    <div id="inputs" class="inputs">
+                                        <input class="input selected" type="text" inputmode="numeric" maxlength="1" value="1" />
+                                        <input class="input" type="text" inputmode="numeric" maxlength="1" value="2" />
+                                        <input class="input" type="text" inputmode="numeric" maxlength="1" value="3" />
+                                        <input class="input" type="text" inputmode="numeric" maxlength="1" value="4"/>
+                                        <input class="input" type="text" inputmode="numeric" maxlength="1" value="5" />
+                                        <input class="input" type="text" inputmode="numeric" maxlength="1" value="6" />
+                                        <input class="input" type="text" inputmode="numeric" maxlength="1" value="7" />
+                                        <input class="input" type="text" inputmode="numeric" maxlength="1" value="8"/>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-check">
+                                    <label class="form-check-label" for="exampleCheck1">How many rofessional do you need?</label>
+                                    <div id="inputs" class="inputs">
+                                        <input class="input selected" type="text" inputmode="numeric" maxlength="1" value="1" />
+                                        <input class="input" type="text" inputmode="numeric" maxlength="1" value="2" />
+                                        <input class="input" type="text" inputmode="numeric" maxlength="1" value="3" />
+                                        <input class="input" type="text" inputmode="numeric" maxlength="1" value="4"/>                                           
+
+                                    </div>
+                                </div>
+
+
+                                <div class="form-check">
+                                    <label class="form-check-label" for="exampleCheck1">How many rofessional do you need?</label>
+                                    <div id="inputs" class="inputs">
+                                        <input class="input-text selected" type="text" value="No I have them" />
+                                        <input class="input-text" type="text" value="Yes,Please" />
+                                        <input class="input-text" type="text" value="Vacuum Only" />
+                                                                                   
+
+                                    </div>
+                                </div>
+                            </div> 
+                            
+                            
+                             
+                        </div>
+                        
+                       
+                    </div>
+                </div>
+            </div> 
             
 
            <!-- Footer Start -->
