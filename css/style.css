@@ -1992,6 +1992,32 @@ a:focus {
     z-index: 15;
 }
 
+.payment-window{
+ 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* transition: opacity 500ms;  */
+    visibility: hidden;
+    z-index: 15;
+}
+
+.otp-window{
+ 
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    /* transition: opacity 500ms;  */
+    visibility: hidden;
+    z-index: 15;
+}
+
 
 .popup {
     margin: 120px auto;
@@ -2003,6 +2029,17 @@ a:focus {
     transition: all 5s ease-in-out;
     position: relative;
 }
+
+.popup2{    
+    margin: 120px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 450px;
+    position: relative;
+    transition: all 5s ease-in-out;
+    position: relative;    
+}
   
 .popup h2 {
     margin-top: 0;
@@ -2010,6 +2047,20 @@ a:focus {
     font-family: Tahoma, Arial, sans-serif;
 }
 .popup .action-btn{
+    width: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+    margin: -20px;
+    border: 0;
+    outline: 0;
+    background: none;
+    border-radius: 0px;
+    padding-left: 20px;
+}
+
+.popup2 .action-btn{
     width: 450px;
     display: flex;
     align-items: center;
@@ -2039,6 +2090,35 @@ a:focus {
     margin-right: -20px;
     
 }
+
+.popup2 .action-btn p {
+    
+    font-weight: bold;
+    font-size: 17px;
+    color: #000;
+    padding: 0;
+    padding-top: 5px;
+    
+}
+
+.popup2 .action-btn .close1 {
+    width: 20px;
+    height: 20px;
+    position: absolute;    
+    right: 35px;
+    transition: all 200ms;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background: green;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    margin-right: -20px;
+    
+}
+
 .popup .close1:hover {
     color: #06D85F;
 }
@@ -2068,6 +2148,34 @@ a:focus {
     border: 0px;
     border-radius: 10px;
     margin-left: 45px;
+}
+
+.popup2 #containue-btn{
+
+    width: 80%;
+    margin-top: 20px;
+    padding: 6px;
+    background: green;
+    color: #fff;
+    text-align: center;
+    border: 0px;
+    border-radius: 10px;
+    margin-left: 45px;
+    padding: 10px 50px;
+}
+
+.popup2 #otp-containue-btn{
+
+    width: 80%;
+    margin-top: 20px;
+    padding: 6px;
+    background: green;
+    color: #fff;
+    text-align: center;
+    border: 0px;
+    border-radius: 10px;
+    margin-left: 45px;
+    padding: 10px 50px;
 }
 .login-container .login-text{
 
@@ -2889,7 +2997,7 @@ a:focus {
     top: 120%;
     left: 20%;
     width: 40px;
-    background-color: #ccc;
+    background-color: green;
     -webkit-transition: .4s;
     transition: .4s;
   }
