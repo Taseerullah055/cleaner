@@ -29,23 +29,6 @@
             .select2-results__option .icon {
                 margin-right: 8px;
             }
-
-            #map {
-                height: 300px;
-                width: 100%;    
-            }
-            .location {
-                margin-bottom: 20px;
-            }
-
-            .hide{
-
-                display: none;
-            }
-            .show{
-
-                display: block;
-            }
         </style>
     </head>
 
@@ -168,656 +151,117 @@
                     </div>
                 </div>
             </div>
-           </div>
-        <!-- Header End -->            
-            
-            <!-- Page Header Start -->
-            <div class="page-header">
-                <div class="container">
-                    <div class="row">                        
-                        <div class="col-12">        
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb" style="padding: 0; padding-top: 5px; margin: 0; background: none;">
-                                  <li class="breadcrumb-item"><a href="service.html"><img src="img/left-arrow.png" style=" width: 25px; margin-right: 20px;">Service Details</a></li>
-                                  <!-- <li class="breadcrumb-item" style="color: #000; font-weight: bold; margin-left: -10px;" aria-current="page"><img src="img/left-arrow.png" style=" width: 25px; margin-right: 20px;">Service Details</li> -->
-                                </ol>
-                            </nav>                        
-                                              
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Page Header End -->                
-
-            <nav aria-label="breadcrumb" style="margin-left: 120px; font-weight: 700;">
-                <ol class="breadcrumb" style="padding: 0;padding-top: 5px; margin: 0; background: none;">
-                  <li class="breadcrumb-item"><a href="service.html"><img src="img/left-arrow.png" style=" width: 20px; margin-right: 10px;">Step 1 of 2</a></li>                 
-                </ol>
-            </nav>  
-            
-                
-                <div class="story">
-                    <div id="popup2" class="payment-window">                    
-                        <div class="popup2">
-                            <div class="action-btn">
-                                <div class="login-logout">
-                                    <p>Change Payment Method</p>
-                                </div>
-                                <a id="close1" class="close1" href="#">&times;</a>
-                            </div>
-                            <div class="login-container-box" id="login-box">                                                    
-                                <div class="login-box" style="display: flex; align-items: center; justify-content: space-between;">                               
-                                      
-                                    <p style="font-weight: bold; font-size: 20px;">Credit/Debit Card</p>
-                                    <label class="switch" style="margin-top: -50px;">
-                                        <input type="checkbox">
-                                        <span class="slider round"></span>
-                                    </label>                                  
-                                    
-                                </div>                           
-                            </div>  
-                            
-                            <div class="login-container-box" id="login-box">                                                    
-                                <div class="login-box" style="display: flex; align-items: center; justify-content: space-between;">                               
-                                      
-                                    <p style="font-weight: bold; font-size: 20px;">Cash (% Extra)</p>
-                                    <label class="switch" style="margin-top: -50px;">
-                                        <input type="checkbox">
-                                        <span class="slider round"></span>
-                                    </label>
-                                    
-                                    
-                                </div>                           
-                            </div>
-
-                            <button id="containue-btn">Select</button>
-                            
-                        </div>
-                    </div>
-                    <div id="popup3" class="otp-window">                    
-                        <div class="popup2">
-                            <div class="action-btn">
-                                <div class="login-text">
-                                    <p>Verify Phone Number</p>
-                                </div>
-                                <a id="close2" class="close1" href="#">&times;</a>
-                            </div>
-                            <div class="login-container" id="login-box">                                                    
-                                <div class="login-text">                               
-                                      
-                                    <p>Please enter the code that was Sent to:</p>
-                                   <span>+971 50 123 4567</span>
-                                  <div id="inputs" class="inputs">
-                                    <input class="input" type="text" 
-                                        inputmode="numeric" maxlength="1" />
-                                    <input class="input" type="text" 
-                                        inputmode="numeric" maxlength="1" />
-                                    <input class="input" type="text" 
-                                        inputmode="numeric" maxlength="1" />
-                                    <input class="input" type="text" 
-                                        inputmode="numeric" maxlength="1" />
-                                  </div>
-
-                                    <p>Resend Code in <span>00:20</span></p>
-
-                                    <div class="btn-tags">
-                                        <button>Whatsapp</button>
-                                        <button>SMS</button>
-                                    </div>
-                                
-                                </div>                                  
-                                    
-                            </div>                           
-                                                        
-                            
-                            <button id="otp-containue-btn">Continue</button>
-                            
-                        </div>
-                    </div>
-                    <h3 class="first-step" style="color: green; margin-top: 20px; margin-left: 120px; margin-bottom: 30px; font-weight: bold;">General Home Cleaning</h3>
-                    <div class="container">
-                        <div class="row">                
-                            <div class="col-lg-6">
-                                <div class="first-step">
-                                    <div class="booking-info">                                 
-                                        <div class="location">
-                                            <p style="display: flex; align-items: center; justify-content: space-between;">
-                                                <span style="display: flex; align-items: center; justify-content: center;">
-                                                    <i class="fa-solid fa-location-dot" style="margin-right: 10px;"></i>
-                                                    <span id="location-text">Fetching location...</span>
-                                                </span>
-                                                <button onclick="changeLocation()">Change</button>
-                                            </p>
-                                            
-                                            
-                                            <div id="map"></div>
-                                            
-                                           
-                                        </div>
-
-                                        <div class="form-check">
-                                            <label class="form-check-label" for="exampleCheck1">How many hours do you need your professional to stay?</label>
-                                            <div id="inputs" class="inputs">
-                                                <input class="input selected" type="text" inputmode="numeric" maxlength="1" value="1" />
-                                                <input class="input" type="text" inputmode="numeric" maxlength="1" value="2" />
-                                                <input class="input" type="text" inputmode="numeric" maxlength="1" value="3" />
-                                                <input class="input" type="text" inputmode="numeric" maxlength="1" value="4"/>
-                                                <input class="input" type="text" inputmode="numeric" maxlength="1" value="5" />
-                                                <input class="input" type="text" inputmode="numeric" maxlength="1" value="6" />
-                                                <input class="input" type="text" inputmode="numeric" maxlength="1" value="7" />
-                                                <input class="input" type="text" inputmode="numeric" maxlength="1" value="8"/>
-
-                                            </div>
-                                        </div>
-
-                                        <div class="form-check">
-                                            <label class="form-check-label" for="exampleCheck1">How many rofessional do you need?</label>
-                                            <div id="inputs" class="inputs">
-                                                <input class="input selected" type="text" inputmode="numeric" maxlength="1" value="1" />
-                                                <input class="input" type="text" inputmode="numeric" maxlength="1" value="2" />
-                                                <input class="input" type="text" inputmode="numeric" maxlength="1" value="3" />
-                                                <input class="input" type="text" inputmode="numeric" maxlength="1" value="4"/>                                           
-
-                                            </div>
-                                        </div>
-
-
-                                        <div class="form-check">
-                                            <label class="form-check-label" for="exampleCheck1">How many rofessional do you need?</label>
-                                            <div id="inputs" class="inputs">
-                                                <input class="input-text selected" type="text" value="No I have them" />
-                                                <input class="input-text" type="text" value="Yes,Please" />
-                                                <input class="input-text" type="text" value="Vacuum Only" />
-                                                                                        
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-
-                                <div class="second-step" style="display: none;">
-                                    <h3 style="color: green;font-size: 20px; margin-top: 15px; margin-left: 20px; margin-bottom: 20px; font-weight: bold;">Checkout</h3>
-                                    <div class="booking-info"> 
-                                                                  
-                                        <div class="login-login">
-
-                                            <div style="display: flex; align-items: center; justify-content: space-between;">
-                                                <p style="font-size: bold; font-size: 20px; ">Payment Method</p>
-                                                <a id="payment-btn" href="#popup2" style="font-weight: bold; margin-left: 300px; margin-top: -20px; color: green; text-decoration: underline solid green; text-decoration-thickness: 2px; background: none;" class="btn" data-toggle="collapse"  role="button" aria-expanded="false" >
-                                                    Change
-                                                </a>
-                                            </div>
-
-                                            <div class="frequency-box">
-                                                <p><i class="fa fa-credit-card"></i> Credit / Debit Card</p>
-                                                <img src="img/debit.jpeg" width="80px" height="25px" alt="">
-                                            </div>
-
-                                            <form>
-                                                <div class="form-group">
-                                                    
-                                                    <input style="border: 0; border-radius: 0; border-bottom: 1px solid rgba(0,0,0,0.5);" type="text" class="form-control" id="phone" placeholder="Card Number">
-                                                    
-                                                </div>
-            
-                                                <div class="form-group">
-                                                    <div class="inner-group" style="display: flex; justify-content: space-between;">
-                                                        <div>                                                            
-                                                            <input style="border: 0; border-radius: 0; border-bottom: 1px solid rgba(0,0,0,0.5);" type="text" class="form-control" id="exp_date" placeholder="Exp Date(MM/YY)">
-                                                        </div>
-            
-                                                        <div>
-                                                            
-                                                            <input style="border: 0; border-radius: 0; border-bottom: 1px solid rgba(0,0,0,0.5);" type="text" class="form-control" id="cvc" placeholder="CVC Number">
-                                                        </div>
-                                                    </div>
-                                                    
-                                                </div>           
-                                                         
-                    
-                                            </form>
-
-                                            
-                                        </div>
-                                    </div>
-
-                                    <div style="margin-left: 180px; margin-top: 25px;">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" style="background: transparent; width: 30px; height: 30px; border-radius: 10px; border: 2px solid black;" value="" id="flexCheckChecked">
-                                            <label class="form-check-label" for="flexCheckChecked" style="margin-left: 15px; color: #000; font-weight: bold; margin-top: 5px;">
-                                             I agree to <span style="color: green; font-size: 18px;">TERMS& CONDITION</span>
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                    <div style="margin-left: 80px; margin-top: 25px;">
-                                        <div class="form-check">
-                                            <button id="complete-btn" style="color: yellow; background: green; border: 0; border-radius: 10px; padding: 10px 80px;">Complete</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                                                
-                                <div class="third-step" style="display: none;">
-                                    <h3 style="color: green;font-size: 20px; margin-top: 15px; margin-left: 20px; margin-bottom: 20px; font-weight: bold;">Checkout</h3>
-                                    <div class="booking-info"> 
-                                                                  
-                                        <div class="login-login">
-
-                                            <div style="display: flex; align-items: center; justify-content: space-between;">
-                                                <p style="font-weight: bold; font-size: 20px; ">Cash (5% Extra)</p>
-                                                <a id="payment-btn" href="#popup2" style="font-weight: bold; margin-left: 300px; margin-top: -20px; color: green; text-decoration: underline solid green; text-decoration-thickness: 2px; background: none;" class="btn" data-toggle="collapse"  role="button" aria-expanded="false" >
-                                                    Change
-                                                </a>
-                                                <a id="otp-btn" href="#popup3" style=" font-size: 14px; margin-left: 295px; margin-right: -50px; margin-top: 70px; border: 0; background: 0; color: green; font-weight: bold; text-decoration: underline solid green;">Get OTP</a>
-                                            </div>                                         
-
-                                            <form>
-                                                <div class="form-group">                                                  
-                                                    
-                                                    <input style="border: 0; border-radius: 0; border-bottom: 1px solid rgba(0,0,0,0.5);" type="text" class="form-control" id="phone" placeholder="Mobile Number">
-                                                    
-                                                </div>          
-                                                
-                                            </form>
-
-                                            
-                                        </div>
-                                    </div>
-
-                                    <div style="margin-left: 180px; margin-top: 25px;">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" style="background: transparent; width: 30px; height: 30px; border-radius: 10px; border: 2px solid black;" value="" id="flexCheckChecked">
-                                            <label class="form-check-label" for="flexCheckChecked" style="margin-left: 15px; color: #000; font-weight: bold; margin-top: 5px;">
-                                             I agree to <span style="color: green; font-size: 18px;">TERMS& CONDITION</span>
-                                            </label>
-                                        </div>
-                                    </div>
-
-                                    <div style="margin-left: 80px; margin-top: 25px;">
-                                        <div class="form-check">
-                                            <button style="color: yellow; background: green; border: 0; border-radius: 10px; padding: 10px 80px;">Complete</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                
-                                
-                            </div>
-            
-                        
-                        <div class="col-lg-6">
-                                                                                                      
-                            <div class="booking-detail">
-                                <h3>Booking Details</h3>
-                                <div>
-                                    <p>Address</p>
-                                    <span>124 Sheikh Zayed Rd-Al Wasl-Dubai United Arab Emirates</span>
-                                </div> 
-                                <div>
-                                    <p>Frequency</p>
-                                    <span>One Time</span>
-                                </div> 
-                                <div>
-                                    <p>Service</p>
-                                    <span>General Home Cleaning</span>
-                                </div> 
-                                <div>
-                                    <p>Service Details</p>
-                                    <span>Balcony Cleaning Irong and Folding</span>
-                                </div>
-                                <div>
-                                    <p>Duration</p>
-                                    <span>2 hours</span>
-                                </div> 
-                                
-                                <div>
-                                    <p>Date & Start Time</p>
-                                    <span>12 Apr 2024 <br> 17:00-17:30</span>
-                                </div>
-                                
-                                <div>
-                                    <p>No of Professional</p>
-                                    <span>4</span>
-                                </div>
-
-                                <div>
-                                    <p>Material</p>
-                                    <span>Yes</span>
-                                </div>
-                                
-                            </div>    
-                              
-                        </div>  
-
-                        <div class="col-lg-6">                                   
-                
-                        </div>  
-
-                        <div class="col-lg-6">
-                                                                                                      
-                            <div class="booking-detail" style="margin-top: 20px;">
-                                <h4 style="color: #000; font-weight: bold; margin-bottom: 20px;">Payment Summary</h4>
-                                <div>
-                                    <p>subtotal</p>
-                                    <p style="font-weight: bold;">AED 88.00</p>
-                                </div>
-                                <div>
-                                    <p>GST</p>
-                                    <p style="font-weight: bold;">AED 10.00</p>
-                                </div>
-                                <div>
-                                    <p>Total</p>
-                                    <p style="font-weight: bold;">AED 98.00</p>
-                                </div>
-                                
-                            </div>    
-                              
-                        </div>  
-
-                        <!-- start -->
-                        <div class="first-step">
-                            <div class="col-lg-6">
-                                <h3 style="color: green; font-size: 21px; margin-top: -250px; margin-left: 20px; margin-bottom: 30px; font-weight: bold;">Popular Add-ons</h3>
-                                <div class="booking-info">                                 
-                                
-                                    <div class="addons">                                    
-                                        <div class="addons-boxs">
-                                            <div class="addon-box">
-                                                <img src="img/feature-1.jpg" width="100px" alt="">
-                                                <div class="addons-text">
-                                                    <h6>Balcony Cleaning</h6>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit vero obcaecati est.</p>
-                                                    <span>AED <b>25</b></span>
-                                                    <a>Add</a>
-                                                </div>
-                                            </div>
-                                            <div class="addon-box">
-                                                <img src="img/feature-2.jpg" width="100px" alt="">
-                                                <div class="addons-text">
-                                                    <h6>Balcony Cleaning</h6>
-                                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque id commodi impedit.</p>
-                                                    <span>AED <b>25</b></span>
-                                                    <a>Add</a>
-                                                </div>
-                                            </div>
-                                            <div class="addon-box">
-                                                <img src="img/feature-3.jpg" width="100px" alt="">
-                                                <div class="addons-text">
-                                                    <h6>Balcony Cleaning</h6>
-                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea earum quo.</p>
-                                                    <span>AED <b>25</b> </span>
-                                                    <a>Add</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> 
-                                
-                                
-                                
-                            </div>
-                        </div>
-                        <!-- end -->                          
-                        
-                       
-                    </div>
-                </div>
-            </div> 
-            
-        <!-- ************* -->   
-
-        <div class="first-step">
-            <h3 style="color: green;font-size: 20px; margin-top: 35px; margin-left: 100px; margin-bottom: 20px; font-weight: bold;">Date and Time</h3>
-            <div class="story">
-                <div class="container">
-                    <div class="row"> 
-                        <div id="popup1" class="popup-window">                    
-                            <div class="popup">
-                                <div class="action-btn">
-                                    <div class="login-logout">
-                                        <p style="font-weight: bold; padding: 0; padding-top: 10px; padding-bottom: -20px; color: #000; text-align: center;">Change Frequency</p>
-                                    </div>
-                                    <a id="close" class="close1" href="#">&times;</a>
-                                </div>
-                                <div class="login-container-box" id="login-box">                                                    
-                                    <div class="login-box">                               
-                                          
-                                        <div class="login-model-box">
-                                            <div class="login-text-box">
-                                                <div class="first">
-
-                                                    <div>                                                        
-                                                        <p>Weekly</p>                                                       
-                                                        <a href="">Popular</a>                                                          
-                                                    </div>
-
-                                                   <div id="inner-second">
-                                                        <span>10%Off</span>
-                                                        <label class="switch">
-                                                            <input type="checkbox">
-                                                            <span class="slider round"></span>
-                                                        </label>
-                                                   </div>
-                                                </div>
-                                                <hr>
-                                                <div class="second">
-
-                                                    <ul>
-                                                        <li>Lorem ipsum dolor sit amet consectetur.</li>
-                                                        <li>Harum odit corrupti natus delectus non?</li>
-                                                    </ul>
-                                                </div>
-                                            </div>                                
-                                        </div>
-                                        
-                                    </div>                           
-                                </div> 
-
-                                <div class="login-container-box" id="login-box">                                                    
-                                    <div class="login-box">                               
-                                          
-                                        <div class="login-model-box">
-                                            <div class="login-text-box">
-                                                <div class="first">
-
-                                                    <div>                                                        
-                                                        <p>Every 2 Week</p>                                                       
-                                                        <a href="">Popular</a>                                                          
-                                                    </div>
-
-                                                   <div id="inner-second">
-                                                        <span>10%Off</span>
-                                                        <label class="switch">
-                                                            <input type="checkbox">
-                                                            <span class="slider round"></span>
-                                                        </label>
-                                                   </div>
-                                                </div>
-                                                <hr>
-                                                <div class="second">
-
-                                                    <ul>
-                                                        <li>Lorem ipsum dolor sit amet consectetur.</li>
-                                                        <li>Harum odit corrupti natus delectus non?</li>
-                                                    </ul>
-                                                </div>
-                                            </div>                                
-                                        </div>
-                                        
-                                    </div>                           
-                                </div> 
-
-                                <div class="login-container-box" id="login-box">                                                    
-                                    <div class="login-box">                               
-                                          
-                                        <div class="login-model-box">
-                                            <div class="login-text-box">
-                                                <div class="first">
-
-                                                    <div>                                                        
-                                                        <p>One Time</p>                                                       
-                                                        <a href="">Popular</a>                                                          
-                                                    </div>
-
-                                                   <div id="inner-second">
-                                                        <span>10%Off</span>
-                                                        <label class="switch">
-                                                            <input type="checkbox">
-                                                            <span class="slider round"></span>
-                                                        </label>
-                                                   </div>
-                                                </div>
-                                                <hr>
-                                                <div class="second">
-
-                                                    <ul>
-                                                        <li>Lorem ipsum dolor sit amet consectetur.</li>
-                                                        <li>Harum odit corrupti natus delectus non?</li>
-                                                    </ul>
-                                                </div>
-                                            </div>                                
-                                        </div>
-                                        
-                                    </div>                           
-                                </div>                               
-                                   
-                                <button id="containue-btn">Select</button>
-                                
-                            </div>
-                        </div>                        
-                        <div class="col-lg-6">
-                            <div class="booking-info"> 
-                                <div class="frequency-box">
-                                    <div>
-                                        <p>Frequency</p>
-                                        <button href="" id="inner">One time service</button>
-                                    </div>
-                                    <a id="show-popup" href="#popup1" id="outer">Change</a>
-                                </div>
-                                <label for="">Which professional do you prefer?</label>
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-lg-3 col-md-6" style="margin-left: -13px;">
-                                            <div class="team-item">
-                                                <div class="team-img">
-                                                    <img src="img/team-1.jpg" alt="Team Image">
-                                                </div>
-                                                <div class="team-text">
-                                                    <h2>Josh Dunn</h2>
-                                                    <h3>CEO</h3>
-                                                    <div class="stars">
-                                                        <img src="img/stars.webp" alt="">
-                                                        <img src="img/stars.webp" alt="">
-                                                        <img src="img/stars.webp" alt="">
-                                                        <img src="img/stars.webp" alt="">
-                                                    </div>
-                                                                                        
-                                                    <span>16 reviews</span>
-                                                
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6" style="margin-left: 50px;">
-                                            <div class="team-item">
-                                                <div class="team-img">
-                                                    <img src="img/team-2.jpg" alt="Team Image">
-                                                </div>
-                                                <div class="team-text">
-                                                    <h2>Josh Dunn</h2>
-                                                    <h3>CEO</h3>
-                                                    <div class="stars">
-                                                        <img src="img/stars.webp" alt="">
-                                                        <img src="img/stars.webp" alt="">
-                                                        <img src="img/stars.webp" alt="">
-                                                        <img src="img/stars.webp" alt="">
-                                                    </div>
-                                                                                        
-                                                    <span>16 reviews</span>
-                                                
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="col-lg-3 col-md-6" style="margin-left: 50px;">
-                                            <div class="team-item">
-                                                <div class="team-img">
-                                                    <img src="img/team-3.jpg" alt="Team Image">
-                                                </div>
-                                                <div class="team-text">
-                                                    <h2>Josh Dunn</h2>
-                                                    <h3>CEO</h3>
-                                                    <div class="stars">
-                                                        <img src="img/stars.webp" alt="">
-                                                        <img src="img/stars.webp" alt="">
-                                                        <img src="img/stars.webp" alt="">
-                                                        <img src="img/stars.webp" alt="">
-                                                    </div>
-                                                                                        
-                                                    <span>16 reviews</span>
-                                                
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-
-                                <label for="">When would you like your service?</label>
-
-                                <div class="form-check" style="margin-left: -20px;">
-                                    <label class="form-check-label" for="exampleCheck1">What time would you like us to start?</label>
-                                    <div id="inputs" class="inputs">
-                                        <input class="input-text selected" type="text" value="17:00-17:00" />
-                                        <input class="input-text" type="text" value="18:00-18:30" />
-                                        <input class="input-text" type="text" value="19:00-19:30" />                                                                                 
-
-                                    </div>
-                                </div>
-                                
-                                
-                            </div>
-                            </div>
-                        </div>  
-                    </div>
-            </div>
         </div>
         
-        <!-- *********** -->
-
-
-       <div id="second-box">
-            <h3 style="color: green;font-size: 20px; margin-top: 35px; margin-left: 100px; margin-bottom: 20px; font-weight: bold;">Additional Comments</h3>
-            <div class="story">
-                <div class="container">
-                    <div class="row"> 
-                        <div class="col-lg-6">
-                            <div class="booking-info"> 
-                                <div class="form-group">
-                                    <label for="exampleFormControlTextarea1">Any instruction or special requirements?</label>
-                                    <textarea style="border: 2px solid green;" class="form-control" id="exampleFormControlTextarea1" rows="3">Keys under Door Matt.</textarea>
-                                </div>                                                                                       
-                                
-                            </div>
-                            
-                        </div>  
-                    </div>
-                </div>
-            </div>
-       </div>
+        <hr style="box-shadow: 0px 3px 5px rgba(0,0,0,0.9);">
+        
+        
         <div class="story">
+
             <div class="container">
-                <div class="row"> 
-                    <div class="col-lg-6">
-                        <button id="proceed-btn" style="border: 0; border-radius: 10px; padding: 10px 60px; background-color: green; color: yellow; margin: 20px 120px;">Proceed to pay</button>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h3 style="font-weight: bold; color: green;font-size: 20px; margin-top: 15px; margin-left: 200px; margin-bottom: 20px; font-weight: bold;">Cancel Booking</h3>
+                        <div class="cancel-info"> 
+                                                        
+                            <div class="login-login">
+
+                                <p class="cancel-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores dignissimos totam itaque est eum magni, maiores quibusdam beatae omnis nobis.</p>
+                                <button class="cancel-btn">Reschedule</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-       </div>
 
+        <div class="story">
 
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h3 style="font-weight: bold; color: green;font-size: 20px; margin-top: 30px; margin-left: 200px; margin-bottom: 20px; font-weight: bold;">Cancellation Reason</h3>
+                        <div class="cancel-info"> 
+                                                        
+                            <div class="login-login">
+
+                                <div class="reasons">
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            I want to change my booking details
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">                                       
+                                    </div>                                    
+                                    <hr>
+
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            I am not available at the time anymore
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">                                       
+                                    </div>                                    
+                                    <hr>
+
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            I found a provider other than Royal Maids
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">                                       
+                                    </div>                                    
+                                    <hr>
+
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Not happay with the punctuality
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">                                       
+                                    </div>                                    
+                                    <hr>
+
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Not getting the professional I asked for
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">                                       
+                                    </div>                                    
+                                    <hr>
+
+                                    <div class="form-check">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                            Leaving the country
+                                        </label>
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">                                       
+                                    </div>                                    
+                                    <hr>
+
+                                    <div class="mb-3">                                        
+                                        <textarea style="border: 2px solid green;" class="form-control" id="exampleFormControlTextarea1" rows="3">Reasons ?</textarea>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+        
+        <div class="story">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8" >
+                        <a style="width: 300px;display: block; cursor: pointer; background: pink; color: green; position: relative; left: 55%; margin-top: 25px; border-radius: 10px; padding: 10px 40px;">Cancel This Booking</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        
            <!-- Footer Start -->
-           <div class="footer">
+        <div class="footer">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 col-lg-3">
@@ -885,125 +329,12 @@
 
        <!-- Template Javascript -->
        <script src="js/main.js"></script>
-       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXE5-ei0e7mHsKBgDPI0hhCub85S9oZs0""></script>
-       <script src="https://kit.fontawesome.com/1fb8216258.js" crossorigin="anonymous"></script>
-
-
-       <!-- Template Javascript -->
-       <script src="js/main.js"></script>
-       <script>
-        function initMap(lat, lng) {
-            const mapDiv = document.getElementById("map");
-            const locationText = document.getElementById("location-text");
-    
-            const position = { lat: lat, lng: lng };
-            colorScheme: google.maps.ColorScheme.LIGHT;
-    
-            // Update location text
-            locationText.innerText = `Latitude: ${lat.toFixed(4)}, Longitude: ${lng.toFixed(4)}`;
-    
-            // Initialize map
-            const map = new google.maps.Map(mapDiv, {
-                center: position,
-                zoom: 15,
-            });
-    
-            // Add a marker
-            new google.maps.Marker({
-                position: position,
-                map: map,
-            });
-        }
-    
-        function fetchLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(
-                    (position) => {
-                        const { latitude, longitude } = position.coords;
-                        initMap(latitude, longitude);
-                    },
-                    (error) => {
-                        alert("Error fetching location: " + error.message);
-                    }
-                );
-            } else {
-                alert("Geolocation is not supported by this browser.");
-            }
-        }
-    
-        $('#map').toggleClass('hide');
-        function changeLocation() {
-    
-            $('#map').toggleClass('show');
-            fetchLocation();
-        }
-    
-        // Fetch location on page load
-        fetchLocation();
-        </script>
 
        <script>
            $(document).ready(function () {             
 
                $('.my-select').selectpicker();
            });
-
-            $('#show-popup').on('click',function(e){
-
-             $('#popup1').css('visibility','visible');
-           });
-
-            $('#payment-btn').on('click',function(){
-                
-              $('#popup2').css('visibility','visible');
-              
-            });            
-
-            $('#otp-btn').on('click',function(){
-                
-                $('#popup3').css('visibility','visible');
-                
-              });
-
-            $('#close').on('click',function(){
-
-             $('#popup1').css('display','none');
-            });
-
-            $('#close1').on('click',function(){
-
-                $('#popup2').css('display','none');
-            });
-
-            $('#close2').on('click',function(){
-
-              $('#popup3').css('display','none');
-            });
-
-            $('#containue-btn').on('click',function(){
-
-                $('#popup1').css('display','none');
-
-            });
-
-            $('#proceed-btn').on('click',function(){
-
-             $('.first-step').css('display','none');
-             $('#second-box').css('display','none');
-             $('.second-step').css('display','block');
-             $(this).css('display','none');
-            });
-
-            $('#complete-btn').on('click',function(){
-
-                $('.first-step').css('display','none');
-                $('#second-box').css('display','none');
-                $('.second-step').css('display','none');
-                $('.third-step').css('display','block');
-                $(this).css('display','none');
-            });
-
-            
        </script>
     </body>
 </html>

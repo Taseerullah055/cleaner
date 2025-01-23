@@ -2536,6 +2536,17 @@ a:focus {
     border-radius: 10px;
 }
 
+.cancel-info{
+
+    width: 100%; 
+    color: #000; 
+    background: #fff; 
+    padding: 20px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3),-2px -2px 8px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    margin-left: 200px;
+}
+
 .booking-info .addons{
 
     display: flex;
@@ -2554,6 +2565,39 @@ a:focus {
     background: rgb(255, 253, 208);
     margin-bottom: 20px;
     position: relative;
+}
+.cancel-info .login-login .cancel-text{
+
+    text-align: center;
+    margin-bottom: 15px;
+}
+.cancel-info .login-login button.cancel-btn{
+
+   
+    background: rgb(255, 253, 208);
+    border: 0;
+    border-radius: 10px;
+    margin-left: 200px;
+    padding: 10px 80px;
+}
+
+/* .cancel-info .login-login .reasons div{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+} */
+
+.cancel-info .login-login .reasons .form-check input{
+
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid green;
+    position: absolute;
+    top: 20%;
+    right: 2%;
 }
 
 .booking-info .team-item {
@@ -3037,6 +3081,27 @@ a:focus {
     border-radius: 50%;
   }
   
+.terms-condition{
+
+    width: 100%;
+    /* padding: 10px; */
+    min-height: 150px;
+}
+
+.terms-condition h2{
+
+    color: #000;
+    font-weight: bold;
+}
+
+.terms-condition ol{
+
+    color: #666666;;
+    font-weight: bold;
+    padding-left: 20px;
+    font-weight: 400;
+
+}
 
 
 
